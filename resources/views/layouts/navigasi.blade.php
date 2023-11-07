@@ -1,6 +1,6 @@
-<nav class="navbar bg-body-tertiary fixed-top">
+<nav class="navbar bg-body-tertiary navbar-expand-md">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Offcanvas navbar</a>
+      <a class="navbar-brand" href="#"><i class="bi-webcam"></i> Presensi</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -10,12 +10,18 @@
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <ul class="navbar-nav justify-content-start align-items-center flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+              <a class="nav-link active" aria-current="page" href="#"><i class="bi-house"></i> Dashboard</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Link</a>
+              <a class="nav-link" href="#"><i class="bi-diagram-2"></i> Jabatan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="bi-people"></i> Karyawan</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"><i class="bi-person-bounding-box"></i> Upload</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

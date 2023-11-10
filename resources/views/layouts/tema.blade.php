@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="{{ asset('bootstrap.css') }}">
     <script src="{{ asset('bootstrap.bundle.js') }}"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    @livewireStyles
+    @livewireScripts
 </head>
 <body>
     @include('layouts.navigasi')

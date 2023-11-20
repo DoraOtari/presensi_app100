@@ -37,10 +37,21 @@
               </ul>
             </li>
           </ul>
-          <form class="d-flex mt-3" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
+          <section class="me-4 d-flex">
+            <img src="https://placehold.co/40" class="rounded-circle">
+            <div class="dropdown open">
+              <a class="btn border-0 dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">
+                    {{ Auth::user()->name }}
+                  </a>
+              <div class="dropdown-menu" aria-labelledby="triggerId">
+                <form action="{{ route('logout') }}" method="post">
+                  @csrf
+                  <button type="submit" class="dropdown-item">Logout</button>
+                </form>
+              </div>
+            </div>
+          </section>
         </div>
       </div>
     </div>

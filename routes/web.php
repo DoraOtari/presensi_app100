@@ -37,8 +37,10 @@ Route::get('/profil', function(){
 });
 
 Route::post('/upload', function(){
+    $path = request('foto')->store('Avatars'); //simpan file foto ke folder Avatars
     DB::table('users')->where('id', Auth::user()->id)
     ->update([
-        'foto' => request('foto')
-    ]);
+        'foto' => $path
+    ]); //perintah simpan nama foto ke database
+    
 });

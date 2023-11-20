@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,3 +31,14 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/profil', function(){
+    return view('halaman.profil');
+});
+
+Route::post('/upload', function(){
+    DB::table('users')->where('id', Auth::user()->id)
+    ->update([
+        'foto' => request('foto')
+    ]);
+});

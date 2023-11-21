@@ -8,10 +8,7 @@
             <form action="{{ url('/upload') }}" method="post">
                 @csrf
                 {{-- bs5-form-file --}}
-                <div class="mb-3">
-                  <label for="" class="form-label">Choose file</label>
-                  <input type="file" class="form-control" name="foto" id="" placeholder="" aria-describedby="fileHelpId">
-                </div>
+                <livewire:upload-file />
                 {{-- bs5-form-submit --}}
                 <button type="submit" class="btn btn-primary float-end">Submit</button>
             </form>

@@ -38,7 +38,11 @@
             </li>
           </ul>
           <section class="me-4 d-flex">
-            <img src="https://placehold.co/40" class="rounded-circle">
+            @if (Auth::user()->avatar)
+              <img src="{{ asset('Avatars/'.Auth::user()->avatar) }}" width="40" class="rounded-circle">
+            @else
+              <img src="https://placehold.co/40" class="rounded-circle">
+            @endif
             <div class="dropdown open">
               <a class="btn border-0 dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
                   aria-expanded="false">

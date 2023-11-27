@@ -5,6 +5,6 @@
     @endif
     <div class="mb-3">
         <label for="" class="form-label">Choose file</label>
-        <input wire:model='foto' type="file" class="form-control" name="foto" id="" placeholder="" aria-describedby="fileHelpId">
+        <input required wire:model='foto' type="file" class="form-control" name="foto" id="" placeholder="" aria-describedby="fileHelpId">
     </div>
 </div>

@@ -39,7 +39,7 @@
           </ul>
           <section class="me-4 d-flex">
             @if (Auth::user()->avatar)
-              <img src="{{ asset('Avatars/'.Auth::user()->avatar) }}" width="40" class="rounded-circle">
+              <img src="{{ asset(Auth::user()->avatar) }}" width="40" class="rounded-circle">
             @else
               <img src="https://placehold.co/40" class="rounded-circle">
             @endif

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -46,4 +47,9 @@ Route::middleware(['auth'])->group(function(){
         return redirect('/profil')->with('pesan', 'Berhasil upload foto');
     });
 
+    Route::controller(KaryawanController::class)->group(function(){
+        Route::get('karyawan', 'index')->name('tampil karyawan');
+        Route::get('karyawan/create', 'create')->name('tambah karyawan');
+        Route::get('karyawan/{karyawan}/edit', 'edit')->name('ubah karyawan');
+    });
 });

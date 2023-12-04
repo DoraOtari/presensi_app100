@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class KaryawanController extends Controller
 {
-    public function tampil()
+    public function index()
     {
         return view('karyawan.index');
     }

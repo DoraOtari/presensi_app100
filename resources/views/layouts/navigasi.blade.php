@@ -10,7 +10,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-          <ul class="navbar-nav nav-underline justify-content-start align-items-center flex-grow-1 pe-3">
+          <ul class="navbar-nav nav-underline  justify-content-start align-items-center flex-grow-1 pe-3">
             <li class="nav-item">
               <a class="nav-link {{ Request::is('dashboard') ? 'active' : '' }}" aria-current="page" href="{{ url('dashboard') }}"><i class="bi-house"></i> Dashboard</a>
             </li>

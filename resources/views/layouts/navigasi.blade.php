@@ -1,4 +1,4 @@
-<nav class="navbar bg-body-tertiary navbar-expand-md">
+<nav class="navbar bg-white navbar-expand-md">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><i class="bi-webcam"></i> Presensi</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -36,7 +36,7 @@
           </ul>
           <section class="me-4 d-flex">
             @if (Auth::user()->avatar)
-              <img src="{{ asset(Auth::user()->avatar) }}" width="40" class="rounded-circle">
+              <img src="{{ asset(Auth::user()->avatar) }}" width="40" class="rounded-circle img-thumbnail" style="aspect-ratio:1/1">
             @else
               <img src="https://placehold.co/40" class="rounded-circle">
             @endif

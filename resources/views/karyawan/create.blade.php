@@ -6,30 +6,9 @@
                 <h4 class="card-title"><i class="bi-person-plus"></i> Tambah Karyawan</h4>
                 <form action="{{ url('karyawan') }}" method="post">
                     @csrf
-                    <div class="mb-3">
-                      <label class="form-label badge bg-primary">NIK</label>
-                      <input type="text" readonly class="form-control-plaintext" name="nik">
-                    </div>
+                    
                     {{--  --}}
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="mb-3">
-                                <label class="form-label">Email</label>
-                                <select class="form-select" name="user_id">
-                                    <option selected>--Pilih Satu--</option>
-                                    @foreach ($user as $item)
-                                        <option value="{{ $item->id }}">{{ $item->email }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="mb-3">
-                              <label class="form-label">Tanggal Lahir</label>
-                              <input type="date" class="form-control" name="tgl_lahir">
-                            </div>
-                        </div>
-                    </div>
+                    <livewire:nik-otomatis :user="$user" />
                     {{--  --}}
                     <div class="mb-3">
                       <label class="form-label">Nama</label>

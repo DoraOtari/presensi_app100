@@ -34,7 +34,7 @@
                             </tr>
                         </tbody>
                         <tfoot>
-                            <a href="{{ route('edit karyawan', 1) }}" class="btn btn-primary float-end">
+                            <a href="{{ url('/karyawan/create') }}" class="btn btn-primary float-end">
                                 Buat
                             </a>
                         </tfoot>

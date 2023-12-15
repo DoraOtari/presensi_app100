@@ -19,9 +19,11 @@
                         <div class="col">
                             <div class="mb-3">
                                 <label class="form-label">Jabatan</label>
-                                <select class="form-select" name="user_id">
+                                <select class="form-select" name="jabatan_id">
                                     <option selected>--Pilih Satu--</option>
-                                    <option value="">New Delhi</option>
+                                    @foreach($jabatan as $item)
+                                        <option value="{{ $item->id }}">{{ $item->nama_jabatan }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>
@@ -37,28 +39,7 @@
                         </div>
                     </div>
                     {{--  --}}
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="mb-3">
-                                <label class="form-label">Provinsi</label>
-                                <select class="form-select" name="provinsi">
-                                    <option selected>--Pilih Satu--</option>
-                                    <option value="L">Laki-laki</option>
-                                    <option value="P">Perempuan</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="mb-3">
-                                <label class="form-label">Kota</label>
-                                <select class="form-select" name="kota">
-                                    <option selected>--Pilih Satu--</option>
-                                    <option value="L">Laki-laki</option>
-                                    <option value="P">Perempuan</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
+                    <livewire:daerah-indo />
                     <label class="form-label">Alamat</label>
                     <textarea name="alamat" class="form-control" placeholder="masukan alamat karyawan"></textarea>
                     <button type="submit" class="btn btn-primary mt-3 float-end">Submit</button>

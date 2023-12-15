@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class KaryawanController extends Controller
 {
@@ -20,7 +21,8 @@ class KaryawanController extends Controller
     public function create()
     {
         $user = User::all();
-        return view('karyawan.create', compact('user'));
+        $jabatan = DB::table('jabatan')->get();
+        return view('karyawan.create', compact('user','jabatan'));
     }
 
 

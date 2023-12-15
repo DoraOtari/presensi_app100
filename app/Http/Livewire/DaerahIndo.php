@@ -7,6 +7,13 @@ use Livewire\Component;
 
 class DaerahIndo extends Component
 {
+    public $provinsi_id;
+
+    public function kota()
+    {
+        $kota = Http::get("https://emsifa.github.io/api-wilayah-indonesia/api/regencies/$this->provinsi_id.json")->collect();
+        return $kota;
+    }
 
     public function provinsi()
     {
@@ -18,6 +25,7 @@ class DaerahIndo extends Component
     {
         return view('livewire.daerah-indo',[
             'provinsi' => $this->provinsi(),
+            'kota' => $this->kota(),
         ]);
     }
 }

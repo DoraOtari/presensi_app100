@@ -3,7 +3,7 @@
 {{-- bs5-table-default -> untuk membuat tampilan table --}}
 @extends('layouts.tema')
 @section('konten')
-    <div class="col-10">
+    <div class="col-10 mx-auto">
         @if (session('pesan'))
             <div class="alert alert-success" role="alert">
                 <strong><i class="bi-bell"></i></strong> {{ session('pesan') }}
@@ -28,16 +28,19 @@
                             </tr>
                         </thead>
                         <tbody class="table-group-divider">
-                            <tr class="">
-                                <td scope="row">R1C1</td>
-                                <td>R1C2</td>
-                                <td>R1C3</td>
-                            </tr>
-                            <tr class="">
-                                <td scope="row">Item</td>
-                                <td>Item</td>
-                                <td>Item</td>
-                            </tr>
+                            @foreach ($karyawan as $item)
+                                <tr>
+                                    <td><img src="{{ asset($item->user->avatar) }}" width="55"></td>
+                                    <td>{{ $item->nama }}</td>
+                                    <td>{{ $item->user->email }}</td>
+                                    <td>{{ $item->jabatan->nama }}</td>
+                                    <td>
+                                        <a href='{{ url("/karyawan/$item->id/edit") }}' class="btn">
+                                            <i class="bi-pen"></i>
+                                        </a>
+                                    </td>
+                                </tr>
+                            @endforeach
                         </tbody>
                         <tfoot>
                             <a href="{{ url('/karyawan/create') }}" class="btn btn-primary float-end">

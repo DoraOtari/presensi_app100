@@ -11,7 +11,7 @@ class KaryawanController extends Controller
 {
     public function index()
     {
-        return view('karyawan.index');
+        return view('karyawan.index',['karyawan' => Karyawan::all()]);
     }
     
     public function edit()

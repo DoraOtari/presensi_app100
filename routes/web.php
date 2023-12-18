@@ -51,5 +51,6 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/karyawan', 'index')->name('tampil karyawan');
         Route::get('/karyawan/create', 'create')->name('tambah karyawan');
         Route::get('/karyawan/{karyawan}/edit', 'edit')->name('edit karyawan');
+        Route::post('/karyawan', 'store');
     });
 });

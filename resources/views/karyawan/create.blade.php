@@ -30,7 +30,7 @@
                         <div class="col">
                             <div class="mb-3">
                                 <label class="form-label">Jenis Kelamin</label>
-                                <select class="form-select" name="user_id">
+                                <select class="form-select" name="kelamin">
                                     <option selected>--Pilih Satu--</option>
                                     <option value="L">Laki-laki</option>
                                     <option value="P">Perempuan</option>

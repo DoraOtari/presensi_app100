@@ -4,6 +4,12 @@
 @extends('layouts.tema')
 @section('konten')
     <div class="col-10">
+        @if (session('pesan'))
+            <div class="alert alert-success" role="alert">
+                <strong><i class="bi-bell"></i></strong> {{ session('pesan') }}
+            </div>
+        @endif
+        
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Data Karyawan</h4>

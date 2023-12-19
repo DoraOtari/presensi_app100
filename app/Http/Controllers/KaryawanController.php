@@ -44,5 +44,11 @@ class KaryawanController extends Controller
         return redirect('/karyawan')->with('pesan', 'Berhasil tambah karyawan');
     }
 
+    public function destroy($id)
+    {
+        Karyawan::destroy($id);
+        return redirect('/karyawan')->with('pesan', 'Berhasil hapus data karyawan');
+    }
+
 
 }

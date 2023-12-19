@@ -52,5 +52,6 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/karyawan/create', 'create')->name('tambah karyawan');
         Route::get('/karyawan/{karyawan}/edit', 'edit')->name('edit karyawan');
         Route::post('/karyawan', 'store');
+        Route::delete('/karyawan/{id}', 'destroy');
     });
 });

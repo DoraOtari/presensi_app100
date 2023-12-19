@@ -9,7 +9,6 @@
                 <strong><i class="bi-bell"></i></strong> {{ session('pesan') }}
             </div>
         @endif
-        
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Data Karyawan</h4>
@@ -33,11 +32,26 @@
                                     <td><img src="{{ asset($item->user->avatar) }}" width="55"></td>
                                     <td>{{ $item->nama }}</td>
                                     <td>{{ $item->user->email }}</td>
-                                    <td>{{ $item->jabatan->nama }}</td>
+                                    <td>{{ $item->jabatan->nama_jabatan }}</td>
+                                    <td>
+                                        <button type="button" class="btn border-0" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                            <i class="bi-eye"></i>
+                                        </button>
+                                        @include('components.modal')
+                                    </td>
                                     <td>
                                         <a href='{{ url("/karyawan/$item->id/edit") }}' class="btn">
                                             <i class="bi-pen"></i>
                                         </a>
+                                    </td>
+                                    <td>
+                                        <form action="{{ url('/karyawan', $item->id) }}" method="post">
+                                            @csrf
+                                            @method('delete')
+                                            <button type="submit" class="btn rounded-0">
+                                                <i class="bi-trash"></i>
+                                            </button>
+                                        </form>
                                     </td>
                                 </tr>
                             @endforeach
